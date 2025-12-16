@@ -3,8 +3,14 @@ A fully responsive PayTM clone built using only HTML and CSS with multiple inter
 
 -Design Features
 Fully Responsive Design - Works perfectly on mobile, tablet, and desktop
+
+
 PayTM Color Scheme - Uses PayTM's signature blue (#00BAF2) and clean white design
+
+
 Modern UI/UX - Clean layout with intuitive navigation
+
+
 Interactive Elements - Hover effects, transitions, and visual feedback
 Font Awesome Icons - For enhanced visual experience
 
