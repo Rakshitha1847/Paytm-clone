@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payments - Send & Receive Money Instantly | PayTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .upi-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .upi-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .qr-container {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--light-blue);
+            border-radius: var(--radius);
+            margin: 20px 0;
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0 auto 20px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .upi-id {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: var(--radius);
+            font-family: monospace;
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .scan-section {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+        
+        .scan-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#00BAF2"/>
+                        <path d="M10 20L15 25L20 15L25 25L30 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">PayTM</span>
+                </a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for services, offers, or help">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="index.html" class="action-btn">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="wallet.html" class="action-btn">
+                        <i class="fas fa-wallet"></i>
+                        <span>Wallet</span>
+                    </a>
+                    <a href="upi.html" class="action-btn active">
+                        <i class="fas fa-qrcode"></i>
+                        <span>UPI</span>
+                    </a>
+                    <a href="recharge.html" class="action-btn">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Recharge</span>
+                    </a>
+                    <a href="cart.html" class="action-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                    <div class="user-profile">
+                        <div class="user-avatar">RS</div>
+                        <span>Rahul</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="wallet.html"><i class="fas fa-wallet"></i> PayTM Wallet</a></li>
+                    <li><a href="upi.html" class="active"><i class="fas fa-qrcode"></i> UPI Money Transfer</a></li>
+                    <li><a href="recharge.html"><i class="fas fa-mobile-alt"></i> Recharge & Bill</a></li>
+                    <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+                    <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Pay Bills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- UPI Section -->
+    <section class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-qrcode"></i> UPI Payments</h1>
+                <p>Send and receive money instantly using UPI</p>
+            </div>
+            
+            <div class="upi-section">
+                <!-- Send Money -->
+                <div class="upi-card">
+                    <h2><i class="fas fa-paper-plane"></i> Send Money</h2>
+                    <p>Transfer money to any UPI ID or bank account</p>
+                    
+                    <div class="payment-form">
+                        <div class="form-group">
+                            <label>Enter UPI ID or Phone Number</label>
+                            <input type="text" placeholder="example@paytm or 9876543210">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Amount (₹)</label>
+                            <input type="number" placeholder="Enter amount">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Remarks (Optional)</label>
+                            <input type="text" placeholder="e.g., Lunch money, Rent, etc.">
+                        </div>
+                        
+                        <button class="btn btn-primary" style="width: 100%;">Proceed to Pay</button>
+                    </div>
+                </div>
+                
+                <!-- Receive Money -->
+                <div class="upi-card">
+                    <h2><i class="fas fa-download"></i> Receive Money</h2>
+                    <p>Share your QR code or UPI ID to receive payments</p>
+                    
+                    <div class="qr-container">
+                        <div class="qr-code">
+                            <i class="fas fa-qrcode" style="font-size: 80px; color: var(--text-light);"></i>
+                        </div>
+                        <p>Scan QR code to pay me</p>
+                    </div>
+                    
+                    <div class="upi-id">
+                        rakshitha@paytm
+                    </div>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary" style="flex: 1;">
+                            <i class="fas fa-copy"></i> Copy UPI ID
+                        </button>
+                        <button class="btn btn-secondary" style="flex: 1;">
+                            <i class="fas fa-share"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scan & Pay -->
+            <div class="scan-section">
+                <h2><i class="fas fa-camera"></i> Scan & Pay</h2>
+                <p>Scan any UPI QR code to make payments instantly</p>
+                
+                <button class="scan-btn">
+                    <i class="fas fa-camera"></i> Open Scanner
+                </button>
+                
+                <div style="margin-top: 30px;">
+                    <p>Or enter merchant UPI ID manually</p>
+                    <div style="max-width: 400px; margin: 20px auto;">
+                        <input type="text" placeholder="Enter merchant UPI ID" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UPI Features -->
+            <div class="services-grid" style="margin-top: 40px;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Transfer</h3>
+                    <p>Money transfers happen instantly, 24x7</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Secure</h3>
+                    <p>Bank-level security with UPI PIN</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Zero Charges</h3>
+                    <p>No transaction charges for UPI payments</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Easy to Use</h3>
+                    <p>Just UPI ID and PIN needed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>UPI Services</h3>
+                    <ul>
+                        <li><a href="#">Send Money</a></li>
+                        <li><a href="#">Receive Money</a></li>
+                        <li><a href="#">Scan & Pay</a></li>
+                        <li><a href="#">UPI Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Security</h3>
+                    <ul>
+                        <li><a href="#">UPI PIN</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Fraud Prevention</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">UPI FAQs</a></li>
+                        <li><a href="#">Troubleshooting</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 PayTM Payments Bank Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
