@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayTM - India's Most Popular Digital Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional Home Page Styles */
+        .security-badge {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .security-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .security-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .security-icon i {
+            font-size: 24px;
+            color: var(--success-green);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#00BAF2"/>
+                        <path d="M10 20L15 25L20 15L25 25L30 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">PayTM</span>
+                </a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for services, offers, or help">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="index.html" class="action-btn active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="wallet.html" class="action-btn">
+                        <i class="fas fa-wallet"></i>
+                        <span>Wallet</span>
+                    </a>
+                    <a href="upi.html" class="action-btn">
+                        <i class="fas fa-qrcode"></i>
+                        <span>UPI</span>
+                    </a>
+                    <a href="recharge.html" class="action-btn">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Recharge</span>
+                    </a>
+                    <a href="cart.html" class="action-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                    <div class="user-profile">
+                        <div class="user-avatar">RS</div>
+                        <span>Rahul</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="wallet.html"><i class="fas fa-wallet"></i> PayTM Wallet</a></li>
+                    <li><a href="upi.html"><i class="fas fa-qrcode"></i> UPI Money Transfer</a></li>
+                    <li><a href="recharge.html"><i class="fas fa-mobile-alt"></i> Recharge & Bill</a></li>
+                    <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+                    <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Pay Bills</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i> Shopping</a></li>
+                    <li><a href="#"><i class="fas fa-gift"></i> Rewards</a></li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i> Financial Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>India's Most-loved Payments App</h1>
+                    <p>Recharge & pay bills, book flights & movie tickets, open a savings account, invest in stocks & mutual funds, and do a lot more.</p>
+                    <a href="wallet.html" class="btn btn-primary">Go to PayTM Wallet</a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">20 Cr+</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2 Cr+</span>
+                            <span class="stat-label">Daily Transactions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2 Lakh+</span>
+                            <span class="stat-label">Merchants</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="PayTM App" style="width: 100%; border-radius: var(--radius);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-bolt"></i> Quick Actions</h2>
+            <div class="action-grid">
+                <a href="wallet.html" class="action-item">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Wallet</h3>
+                    <p>Balance: ₹1,250</p>
+                </a>
+                <a href="upi.html" class="action-item">
+                    <i class="fas fa-qrcode"></i>
+                    <h3>UPI</h3>
+                    <p>Send/Receive Money</p>
+                </a>
+                <a href="recharge.html" class="action-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Recharge</h3>
+                    <p>Prepaid & Postpaid</p>
+                </a>
+                <a href="bills.html" class="action-item">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Bill Payments</h3>
+                    <p>Electricity, Water, Gas</p>
+                </a>
+                <a href="tickets.html" class="action-item">
+                    <i class="fas fa-film"></i>
+                    <h3>Movie Tickets</h3>
+                    <p>Book Now</p>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fas fa-plane"></i>
+                    <h3>Flight Tickets</h3>
+                    <p>Domestic & International</p>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fas fa-train"></i>
+                    <h3>Train Tickets</h3>
+                    <p>IRCTC Booking</p>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Credit Card</h3>
+                    <p>Bill Payment</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-th-large"></i> Our Services</h2>
+            <div class="services-grid">
+                <a href="wallet.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>PayTM Wallet</h3>
+                    <p>Fast & secure digital wallet for all your payments</p>
+                </a>
+                
+                <a href="upi.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>UPI Payments</h3>
+                    <p>Instant money transfers using UPI ID</p>
+                </a>
+                
+                <a href="recharge.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Recharge</h3>
+                    <p>Recharge prepaid mobile & DTH instantly</p>
+                </a>
+                
+                <a href="bills.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Bill Payments</h3>
+                    <p>Pay electricity, gas, water & other utility bills</p>
+                </a>
+                
+                <a href="tickets.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket Booking</h3>
+                    <p>Book movie, flight, train & bus tickets</p>
+                </a>
+                
+                <a href="#" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Online Shopping</h3>
+                    <p>Shop from top brands with great offers</p>
+                </a>
+                
+                <a href="#" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Financial Services</h3>
+                    <p>Loans, insurance, investments & more</p>
+                </a>
+                
+                <a href="#" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Rewards & Offers</h3>
+                    <p>Exciting cashback & discount offers</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-tags"></i> Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <span class="offer-badge">Limited Time</span>
+                    <h3>UPI Money Transfer</h3>
+                    <p>Get cashback up to ₹100 on your first 3 UPI transactions this month</p>
+                    <a href="upi.html" class="btn btn-secondary">Use Offer</a>
+                </div>
+                
+                <div class="offer-card">
+                    <span class="offer-badge">Hot Deal</span>
+                    <h3>Mobile Recharge</h3>
+                    <p>Flat 10% cashback on recharges above ₹299. Use code: RECH10</p>
+                    <a href="recharge.html" class="btn btn-secondary">Recharge Now</a>
+                </div>
+                
+                <div class="offer-card">
+                    <span class="offer-badge">New User</span>
+                    <h3>Bill Payments</h3>
+                    <p>Get ₹50 cashback on your first utility bill payment above ₹500</p>
+                    <a href="bills.html" class="btn btn-secondary">Pay Bills</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Badge -->
+    <div class="container">
+        <div class="security-badge">
+            <h3><i class="fas fa-shield-alt"></i> 100% Safe & Secure Payments</h3>
+            <p>Your security is our top priority. All transactions are encrypted and secured.</p>
+            <div class="security-icons">
+                <div class="security-icon">
+                    <i class="fas fa-lock"></i>
+                    <span>256-bit SSL</span>
+                </div>
+                <div class="security-icon">
+                    <i class="fas fa-user-shield"></i>
+                    <span>PCI DSS Certified</span>
+                </div>
+                <div class="security-icon">
+                    <i class="fas fa-check-circle"></i>
+                    <span>ISO 27001 Certified</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PayTM</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="wallet.html">PayTM Wallet</a></li>
+                        <li><a href="upi.html">UPI Payments</a></li>
+                        <li><a href="recharge.html">Recharge & Bill</a></li>
+                        <li><a href="tickets.html">Ticket Booking</a></li>
+                        <li><a href="bills.html">Bill Payments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Grievance Redressal</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Anti-Spam Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Partner With Us</h3>
+                    <ul>
+                        <li><a href="#">Merchant Solutions</a></li>
+                        <li><a href="#">Developer APIs</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Corporate Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="app-download">
+                <h3>Download PayTM App</h3>
+                <p>Get the app for better experience</p>
+                <div class="store-buttons">
+                    <a href="#" class="store-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <small>GET IT ON</small>
+                            <div>Google Play</div>
+                        </div>
+                    </a>
+                    <a href="#" class="store-btn">
+                        <i class="fab fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <div>App Store</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 PayTM Payments Bank Ltd. All rights reserved.</p>
+                <p>Registered Office: PayTM Payments Bank Ltd., Noida, Uttar Pradesh - 201301</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
